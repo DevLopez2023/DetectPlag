@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='icon/registro.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.min.css')}}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div class="w3-top">
+        <div class="w3-row w3-large w3-teal">
+            <div class="w3-col s12">
+                <a href="{{url_for('login')}}" class="w3-button w3-block text-decoration-none"><i class="fa fa-sign-in" aria-hidden="true"></i> Volver al Login</i></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="vh-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="d-flex justify-content-center mt-4 mb-4">
+                        <form action="{{ url_for('registro')}}" method="post" autocomplete="off">
+                            <img src="{{url_for ('static', filename ='/icon/perfil.png')}}" alt="Detect TAPS" style="width:30%; display: block; margin: 0px auto;">
+                            <p style="text-align: center; color:black; font-weight: bold;">D-TAPS</p>
+                            <p style="text-align: center; color:black; font-weight: bold;">Registro Previo</p>
+
+                            <div class="w3-row w3-section">
+                                <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user-circle"></i></div>
+                                <div class="w3-rest">
+                                    <input type="text " name="name" class="form-control form-control-md" placeholder="Ingrese sus nombres" required>
+                                </div>
+                            </div>
+                            <div class="w3-row w3-section">
+                                <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user-circle"></i></div>
+                                <div class="w3-rest">
+                                    <input type="text" name="second" class="form-control form-control-md" placeholder="Ingrese sus apellidos" required>
+                                </div>
+                            </div>
+                            <div class="w3-row w3-section">
+                                <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user-circle-o"></i></div>
+                                <div class="w3-rest">
+                                    <input type="text" name="username" class="form-control form-control-md" placeholder="Ingrese su nombre de usuario" required>
+                                </div>
+                            </div>
+                            <div class="w3-row w3-section">
+                                <div class="w3-col" style="width:50px"><i class="fa fa-key" aria-hidden="true"></i></div>
+                                <div class="w3-rest">
+                                    <input type="password" name="password" class="form-control form-control-md password1 " placeholder="Ingrese una contraseña" min="6" max="10" required><span class="fa fa-fw fa-eye password-icon show-password"></span>
+                                </div>
+                            </div>
+                            <div class="w3-row w3-section">
+                                <div class="w3-col" style="width:50px"><i class="fa fa-key" aria-hidden="true"></i></div>
+                                <div class="w3-rest">
+                                    <input type="password" name="c_password" class="form-control form-control-md password2" placeholder="Repita la contraseña" min="6" max="10" required><span class="fa fa-fw fa-eye password-icon show-confirm-password"></span>
+                                </div>
+                            </div>
+                            <input type="submit" id="registro" class="btn btn-info btn-lg btn-block mt-2" value="Registrar">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- pie de página -->
+    <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+        <h4>&copy; D-TAPS </h4>
+        <a href="#" class="w3-button w3-black w3-margin-right"><i class="fa fa-arrow-up w3-margin-right"></i>Ir</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Desarrollado por: Ing. Oscar López & Ing. Gabriel Morejón</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="{{url_for('static', filename='js/carga_pagina.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js "></script>
+    <script src="{{url_for( 'static', filename='js/password.js')}} "></script>
+    <script src="{{url_for( 'static', filename='js/confirm_password.js')}} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{url_for( 'static', filename='js/script.min.js')}} "></script>
+
+</body>
+
+</html>

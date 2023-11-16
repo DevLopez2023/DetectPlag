@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Error de subida</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+
+<body class="bg-danger">
+    <header class="text-center masthead">
+        <div class="row">
+            <div class="col justify-content-center align-items-center text-white">
+                <img src="{{url_for ('static', filename = '/icon/icon_error.webp')}}" width="100px" height="100px" class="img-fluid mb-3">
+                <br>
+                <p class="display-5">Error. Primero debe subir una imagen y deben tener extensión JPG o PNG</p>
+                <a href="{{url_for('subida')}}" class="btn btn-light btn-sm m-2"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Volver</a>
+            </div>
+        </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+</body>
+
+</html>

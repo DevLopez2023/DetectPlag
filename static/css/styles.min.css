@@ -1,0 +1,25 @@
+.btn.btn-outline-light.btn-social3:hover,
+.btn.btn-outline-light.btn-social:hover {
+    background-color: purple
+}
+
+.btn.btn-outline-light.btn-social2:hover {
+    background-color: red
+}
+
+.fa.fa-youtube-play.fa-fw {
+    color: #fff
+}
+
+.fa.fa-facebook.fa-fw {
+    color: #fff
+}
+
+.btn.btn-outline-light.btn-social1:hover {
+    background-color: #00f
+}
+
+.fa.fa-facebook.fa-fw,
+.fa.fa-instagram.fa-fw {
+    color: #fff
+}

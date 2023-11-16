@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Subida de foto - KurobaPlag</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='icon/u_ga.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="w3-top w3-teal">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"></a>
+            <a href="{{url_for('tablero')}}" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 text-decoration-none"><i class="fa fa-home w3-margin-right"></i>D-TAPS</a>
+        </div>
+    </div>
+
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:15px; margin-bottom:20px;">
+        <!-- The Grid -->
+        <div class="w3-row-padding">
+            <header class="text-center text-white masthead d-flex justify-content-center align-items-center">
+                <form action="" enctype='multipart/form-data' method='POST'>
+                    <div class="row">
+                        <div class="col">
+                            <input type="file" name="file" id="file" placeholder="Imagen">
+                            <br>
+                            <br>
+                            <p class="text-dark font-italic"><kbd>Estado de archivo: </kbd>
+                                <h5 id="men_file"></h5>
+                            </p>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <p class="text-dark" style="font-size:x-small">Previa visualización</p>
+                                        <img src="{{url_for ('static', filename = '/icon/upload.png')}}" width="160px" height="160px" id="previo" class="img-fluid">
+                                    </h5>
+                                    <p class="card-text"><button type="submit" onclick="espera()" class="btn btn-primary btn-sm" title="Cargar imagen"><i class="fa fa-cloud-upload" aria-hidden="true"></i>  Analizar</button></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </header>
+        </div>
+    </div>
+
+    <!-- pie de página -->
+    <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+        <h4>&copy; D-TAPS </h4>
+        <a href="#" class="w3-button w3-black w3-margin-right"><i class="fa fa-arrow-up w3-margin-right"></i>Ir</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Desarrollado por: Ing. Oscar López & Ing. Gabriel Morejón</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="{{url_for('static', filename='js/carga_pagina.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/acciones_fotos.js')}}"></script>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</body>
+
+</html>

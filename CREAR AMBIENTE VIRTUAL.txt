@@ -1,0 +1,20 @@
+- Crear ambiente
+python -m venv --system-site-packages .\venv
+
+- Activar ambiente
+.\venv\Scripts\activate
+
+- Actualizar pip
+pip install --upgrade pip
+
+- Mostrar paquetes
+pip list
+
+- Salir del entorno virtual
+deactivate 
+
+- Instalar tensorflow
+pip install tensorflow
+
+- Verificar instalación
+python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"

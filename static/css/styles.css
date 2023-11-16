@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Mingzat&display=swap');
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Mingzat', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0%;
+    margin: 0%;
+}
+
+.carta_video {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.centrado {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Carga para todas las páginas de la app */
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+.registro {
+    width: 600px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 115px auto;
+}
+
+.registro h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+
+.registro .links {
+    display: flex;
+    padding: 0 15px;
+}
+
+.links a,
+.registro .links a {
+    color: #adb2ba;
+    text-decoration: none;
+    display: inline-flex;
+    padding: 0 10px 10px 10px;
+    font-weight: bold;
+}
+
+.login .links a:hover,
+.registro .links a:hover {
+    color: #9da3ac;
+}
+
+.links a.active,
+.registro .links a.active {
+    border-bottom: 3px solid #546175;
+    color: #248034;
+}
+
+.registro form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.registro form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #368543;
+    color: #ffffff;
+}
+
+.registro form input[type="password"],
+.registro form input[type="text"],
+.registro form input[type="email"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.registro form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #368543;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.registro form input[type="submit"]:hover {
+    background-color: #3a5f25;
+    transition: background-color 0.2s;
+}
+
+body.loggedin {
+    background-color: #f3f4f7;
+}
+
+.content {
+    width: 900px;
+    margin: 130px;
+}
+
+.content h2 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #e0e0e3;
+    color: #4a536e;
+}
+
+.content>p,
+.content>div {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    margin: 25px 0;
+    padding: 25px;
+    background-color: #fff;
+}
+
+.content>p table td,
+.content>div table td {
+    padding: 5px;
+}
+
+.content>p table td:first-child,
+.content>div table td:first-child {
+    font-weight: bold;
+    color: #4a536e;
+    padding-right: 15px;
+}
+
+.content>div p {
+    padding: 5px;
+    margin: 0 0 10px 0;
+}
+
+.opc {
+    color: white;
+}
+
+.opc:hover {
+    color: rgb(112, 216, 71);
+}
+
+
+/*tipografías*/
+
+.flecha {
+    font-size: 50px;
+}
+
+.contenedor_tablero {
+    margin-top: 120px;
+}
+
+.bienvenida {
+    font-size: 18px;
+}
+
+.analitycs_mod {
+    font-size: 50px;
+    color: white;
+}
+
+.w3-tag,
+.fa {
+    cursor: pointer
+}
+
+.w3-tag {
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    margin-top: 6px
+}
+
+.card .link_manual {
+    text-decoration: none;
+}
+
+.video {
+    width: 100%;
+    max-width: 640px;
+}
+
+
+/*
+DISEÑO DE ÁREA PARA LA INSERCIÓN DE LA FOTO 
+*/
+
+[type="file"] {
+    /* Style the color of the message that says 'No file chosen' */
+    color: black;
+}
+
+[type="file"]::-webkit-file-upload-button {
+    background: rgb(255, 255, 255);
+    border: 2px dashed #000000;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-size: 9px;
+    outline: none;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
+
+[type="file"]::-webkit-file-upload-button:hover {
+    background: rgb(54, 133, 2);
+    border: 2px dashed #000000;
+    color: white;
+}
+
+.heads {
+    background: #134E5E;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #71B280, #134E5E);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #71B280, #134E5E);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
+
+@media (min-width: 1025px) {
+    .h-custom-2 {
+        height: 100%;
+    }
+}
+
+.password-icon {
+    float: right;
+    position: relative;
+    margin: -25px 10px 0 0;
+    cursor: pointer;
+}
+
+.link-info:hover {
+    background-color: #0e451b;
+    cursor: pointer;
+    color: white;
+}
+
+.enviar {
+    background: #d25959;
+    box-shadow: none;
+    color: white;
+    margin-bottom: 0;
+    width: 100px
+}
+
+.enviar:hover {
+    text-decoration: underline
+}
+
+.confirmacion {
+    text-align: center;
+    background: #C6FFD5;
+    border: 1px solid green;
+    padding: 1px;
+}
+
+.negacion {
+    text-align: center;
+    background: #ffcccc;
+    border: 1px solid red;
+    padding: 1px;
+}
+
+.men_pass {
+    font-size: 20px;
+}

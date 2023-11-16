@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Análisis - D-TAPS</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='icon/vigilancia.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div class="w3-top w3-teal">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"></a>
+            <a href="{{url_for('tablero')}}" class="w3-bar-item w3-button w3-padding-large w3-theme-d4 text-decoration-none"><i class="fa fa-home w3-margin-right"></i>D-TAPS</a>
+        </div>
+    </div>
+    <header class="text-center masthead">
+        <div class="row">
+            <div class="col d-flex justify-content-center align-items-start">
+                <form action="" enctype='multipart/form-data' method='POST'>
+                    <p class="resultado_a text-white bg-danger"><b>IMAGEN SUBIDA</b></p>
+                    <img src="{{url_for ('static', filename = '/image/test.jpg')}}" width="330" height="330" alt="Imagen obtenida">
+                    <br>
+                    <a href="{{url_for('subida')}}" title="Volver" class="btn btn-danger btn-xs m-2 text-white"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                </form>
+            </div>
+            <div class="col d-flex justify-content-center align-items-start">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="bg-dark text-white" colspan="2">INDICADORES DE AFECTACIÓN</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="bg-dark text-white">COLOR</th>
+                            <th class="bg-dark text-white">DESCRIPCIÓN</th>
+                        </tr>
+                        <tr>
+                            <th class="bg-warning"></th>
+                            <td class="bg-white text-dark">NO EXISTE PLAGA</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-success"></th>
+                            <td class="bg-white text-dark">1-69 (%) MODERADA</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-danger"></th>
+                            <td class="bg-white text-dark">70-100 (%) GRAVE</td>
+                        </tr>
+                    </thead>
+                </table>
+                <br>
+            </div>
+            <div class="col d-flex justify-content-center align-items-start">
+                <form action="" enctype='multipart/form-data' method='POST'>
+                    <p class="resultado_a text-white bg-success"><b>PROCESAMIENTO</b></p>
+                    <img src="{{url_for ('static', filename = '/image/tratamiento/image_detected.jpg')}}" width="330" height="330" alt="Imagen obtenida">
+                    <br>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="bg-dark text-white">RESULTADO</th>
+                            </tr>
+                            <tr>
+                                <td class="bg-{{b_msg}} text-{{c_msg}}"><i>{{dtp}}</i></td>
+                            </tr>
+                            <tr>
+                                <th class="bg-dark text-white">% DE AFECTACIÓN</th>
+                            </tr>
+                            <tr>
+                                <td class="bg-white text-dark">{{porc}}</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- pie de página -->
+    <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+        <h4>&copy; D-TAPS </h4>
+        <a href="#" class="w3-button w3-black w3-margin-right"><i class="fa fa-arrow-up w3-margin-right"></i>Ir</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Desarrollado por: Ing. Oscar López & Ing. Gabriel Morejón</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/carga_pagina.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+</body>
+
+</html>

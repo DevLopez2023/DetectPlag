@@ -1,0 +1,33 @@
+{
+    "labels" : [
+        "huevo de mosca blanca",
+        "larva de mosca blanca",
+        "mosca blanca"
+    ],
+    "anchors" : [
+        [
+            64,
+            112,
+            124,
+            160,
+            233,
+            277
+        ],
+        [
+            24,
+            26,
+            28,
+            45,
+            53,
+            64
+        ],
+        [
+            5,
+            6,
+            10,
+            14,
+            13,
+            24
+        ]
+    ]
+}
